@@ -20,7 +20,6 @@ class IsAnagram:
 				occur[character] += 1
 		return occur
 
-
 	@staticmethod
 	def check(word, check) -> bool:
 		return IsAnagram.__occur(word) == IsAnagram.__occur(check)
@@ -35,5 +34,6 @@ class IsAnagram:
 				results.update({i: IsAnagram.check(words[0], words[1])})
 				i += 1
 		return results
+
 
 doctest.run_docstring_examples(IsAnagram, globals())
